@@ -23,11 +23,11 @@ const taskResolvers = {
          });
          return task.save();
         },
-        // delete an author using id
+        // delete a task using id
         deleteTask:(root,{id}) => {
             return taskModel.findOneAndRemove({id:id})
         },
-        // we would like to update name of author using id
+        // update task text using id
         updateTask:(root,{id,text}) => {
             return taskModel.findOneAndUpdate({id:id},{text:text});
         }

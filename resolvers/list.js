@@ -19,11 +19,11 @@ const listResolvers = {
          });
          return list.save();
         },
-        // delete an author using id
+        // delete a list using id
         deleteList:(root,{id}) => {
             return listModel.findOneAndRemove({id:id})
         },
-        // we would like to update name of author using id
+        // update listname using id
         updateList:(root,{id,listName}) => {
             return listModel.findOneAndUpdate({id:id},{listName:listName});
         }

@@ -8,6 +8,7 @@ const listSchema = new schema({
     listName: String
 });
 
+//define mongo collection
 const listModel = mongoose.model('list',listSchema);
 
 export default listModel;

@@ -14,6 +14,7 @@ server.use('/graphiql', graphiqlExpress({
     endpointURL:'/graphql'
 }));
 
+//connect to mongodb
 mongoose.connect('mongodb://localhost/graphqlTrello');
 
 const connection = mongoose.connection;
@@ -44,6 +45,7 @@ const schema = mergeSchemas({
     )
 });
 
+//establish mongoconnection
 connection.once('open',()=>{
     console.log('connection to Mongodb was successful')
 })
